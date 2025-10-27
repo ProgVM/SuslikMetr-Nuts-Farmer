@@ -1,427 +1,333 @@
-/data/data/com.termux/files/usr/lib/python3.12/site-packages/telethon
 ├── __init__.py
 ├── __pycache__
 │   ├── __init__.cpython-312.pyc
-│   ├── session.cpython-312.pyc
+│   ├── custom.cpython-312.pyc
+│   ├── functions.cpython-312.pyc
+│   ├── helpers.cpython-312.pyc
+│   ├── hints.cpython-312.pyc
+│   ├── password.cpython-312.pyc
+│   ├── requestiter.cpython-312.pyc
+│   ├── sync.cpython-312.pyc
+│   ├── types.cpython-312.pyc
+│   ├── utils.cpython-312.pyc
 │   └── version.cpython-312.pyc
-├── _impl
+├── _updates
 │   ├── __init__.py
 │   ├── __pycache__
-│   │   └── __init__.cpython-312.pyc
-│   ├── client
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-312.pyc
-│   │   │   └── errors.cpython-312.pyc
-│   │   ├── client
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   ├── auth.cpython-312.pyc
-│   │   │   │   ├── bots.cpython-312.pyc
-│   │   │   │   ├── chats.cpython-312.pyc
-│   │   │   │   ├── client.cpython-312.pyc
-│   │   │   │   ├── dialogs.cpython-312.pyc
-│   │   │   │   ├── files.cpython-312.pyc
-│   │   │   │   ├── messages.cpython-312.pyc
-│   │   │   │   ├── net.cpython-312.pyc
-│   │   │   │   ├── updates.cpython-312.pyc
-│   │   │   │   └── users.cpython-312.pyc
-│   │   │   ├── auth.py
-│   │   │   ├── bots.py
-│   │   │   ├── chats.py
-│   │   │   ├── client.py
-│   │   │   ├── dialogs.py
-│   │   │   ├── files.py
-│   │   │   ├── messages.py
-│   │   │   ├── net.py
-│   │   │   ├── updates.py
-│   │   │   └── users.py
-│   │   ├── errors.py
-│   │   ├── events
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   ├── event.cpython-312.pyc
-│   │   │   │   ├── messages.cpython-312.pyc
-│   │   │   │   └── queries.cpython-312.pyc
-│   │   │   ├── event.py
-│   │   │   ├── filters
-│   │   │   │   ├── __init__.py
-│   │   │   │   ├── __pycache__
-│   │   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   │   ├── callback.cpython-312.pyc
-│   │   │   │   │   ├── combinators.cpython-312.pyc
-│   │   │   │   │   ├── common.cpython-312.pyc
-│   │   │   │   │   └── messages.cpython-312.pyc
-│   │   │   │   ├── callback.py
-│   │   │   │   ├── combinators.py
-│   │   │   │   ├── common.py
-│   │   │   │   └── messages.py
-│   │   │   ├── messages.py
-│   │   │   └── queries.py
-│   │   ├── parsers
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   ├── html.cpython-312.pyc
-│   │   │   │   ├── markdown.cpython-312.pyc
-│   │   │   │   └── strings.cpython-312.pyc
-│   │   │   ├── html.py
-│   │   │   ├── markdown.py
-│   │   │   └── strings.py
-│   │   └── types
-│   │       ├── __init__.py
-│   │       ├── __pycache__
-│   │       │   ├── __init__.cpython-312.pyc
-│   │       │   ├── admin_right.cpython-312.pyc
-│   │       │   ├── album_builder.cpython-312.pyc
-│   │       │   ├── async_list.cpython-312.pyc
-│   │       │   ├── callback_answer.cpython-312.pyc
-│   │       │   ├── chat_restriction.cpython-312.pyc
-│   │       │   ├── dialog.cpython-312.pyc
-│   │       │   ├── draft.cpython-312.pyc
-│   │       │   ├── file.cpython-312.pyc
-│   │       │   ├── forward_info.cpython-312.pyc
-│   │       │   ├── inline_result.cpython-312.pyc
-│   │       │   ├── keyboard.cpython-312.pyc
-│   │       │   ├── link_preview.cpython-312.pyc
-│   │       │   ├── login_token.cpython-312.pyc
-│   │       │   ├── message.cpython-312.pyc
-│   │       │   ├── meta.cpython-312.pyc
-│   │       │   ├── participant.cpython-312.pyc
-│   │       │   ├── password_token.cpython-312.pyc
-│   │       │   └── recent_action.cpython-312.pyc
-│   │       ├── admin_right.py
-│   │       ├── album_builder.py
-│   │       ├── async_list.py
-│   │       ├── buttons
-│   │       │   ├── __init__.py
-│   │       │   ├── __pycache__
-│   │       │   │   ├── __init__.cpython-312.pyc
-│   │       │   │   ├── button.cpython-312.pyc
-│   │       │   │   ├── callback.cpython-312.pyc
-│   │       │   │   ├── inline_button.cpython-312.pyc
-│   │       │   │   ├── request_geo_location.cpython-312.pyc
-│   │       │   │   ├── request_phone.cpython-312.pyc
-│   │       │   │   ├── request_poll.cpython-312.pyc
-│   │       │   │   ├── switch_inline.cpython-312.pyc
-│   │       │   │   ├── text.cpython-312.pyc
-│   │       │   │   └── url.cpython-312.pyc
-│   │       │   ├── button.py
-│   │       │   ├── callback.py
-│   │       │   ├── inline_button.py
-│   │       │   ├── request_geo_location.py
-│   │       │   ├── request_phone.py
-│   │       │   ├── request_poll.py
-│   │       │   ├── switch_inline.py
-│   │       │   ├── text.py
-│   │       │   └── url.py
-│   │       ├── callback_answer.py
-│   │       ├── chat_restriction.py
-│   │       ├── dialog.py
-│   │       ├── draft.py
-│   │       ├── file.py
-│   │       ├── forward_info.py
-│   │       ├── inline_result.py
-│   │       ├── keyboard.py
-│   │       ├── link_preview.py
-│   │       ├── login_token.py
-│   │       ├── message.py
-│   │       ├── meta.py
-│   │       ├── participant.py
-│   │       ├── password_token.py
-│   │       ├── peer
-│   │       │   ├── __init__.py
-│   │       │   ├── __pycache__
-│   │       │   │   ├── __init__.cpython-312.pyc
-│   │       │   │   ├── channel.cpython-312.pyc
-│   │       │   │   ├── group.cpython-312.pyc
-│   │       │   │   ├── peer.cpython-312.pyc
-│   │       │   │   └── user.cpython-312.pyc
-│   │       │   ├── channel.py
-│   │       │   ├── group.py
-│   │       │   ├── peer.py
-│   │       │   └── user.py
-│   │       └── recent_action.py
-│   ├── crypto
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-312.pyc
-│   │   │   ├── aes.cpython-312.pyc
-│   │   │   ├── auth_key.cpython-312.pyc
-│   │   │   ├── crypto.cpython-312.pyc
-│   │   │   ├── factorize.cpython-312.pyc
-│   │   │   ├── rsa.cpython-312.pyc
-│   │   │   └── two_factor_auth.cpython-312.pyc
-│   │   ├── aes.py
-│   │   ├── auth_key.py
-│   │   ├── crypto.py
-│   │   ├── factorize.py
-│   │   ├── rsa.py
-│   │   └── two_factor_auth.py
-│   ├── mtproto
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-312.pyc
-│   │   │   ├── authentication.cpython-312.pyc
-│   │   │   └── utils.cpython-312.pyc
-│   │   ├── authentication.py
-│   │   ├── mtp
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   ├── encrypted.cpython-312.pyc
-│   │   │   │   ├── plain.cpython-312.pyc
-│   │   │   │   └── types.cpython-312.pyc
-│   │   │   ├── encrypted.py
-│   │   │   ├── plain.py
-│   │   │   └── types.py
-│   │   ├── transport
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   ├── abcs.cpython-312.pyc
-│   │   │   │   ├── abridged.cpython-312.pyc
-│   │   │   │   ├── full.cpython-312.pyc
-│   │   │   │   └── intermediate.cpython-312.pyc
-│   │   │   ├── abcs.py
-│   │   │   ├── abridged.py
-│   │   │   ├── full.py
-│   │   │   └── intermediate.py
-│   │   └── utils.py
-│   ├── mtsender
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-312.pyc
-│   │   │   ├── errors.cpython-312.pyc
-│   │   │   ├── reconnection.cpython-312.pyc
-│   │   │   └── sender.cpython-312.pyc
-│   │   ├── errors.py
-│   │   ├── reconnection.py
-│   │   └── sender.py
-│   ├── session
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-312.pyc
-│   │   │   └── session.cpython-312.pyc
-│   │   ├── chat
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   ├── hash_cache.cpython-312.pyc
-│   │   │   │   └── peer_ref.cpython-312.pyc
-│   │   │   ├── hash_cache.py
-│   │   │   └── peer_ref.py
-│   │   ├── message_box
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-312.pyc
-│   │   │   │   ├── adaptor.cpython-312.pyc
-│   │   │   │   ├── defs.cpython-312.pyc
-│   │   │   │   └── messagebox.cpython-312.pyc
-│   │   │   ├── adaptor.py
-│   │   │   ├── defs.py
-│   │   │   └── messagebox.py
-│   │   ├── session.py
-│   │   └── storage
-│   │       ├── __init__.py
-│   │       ├── __pycache__
-│   │       │   ├── __init__.cpython-312.pyc
-│   │       │   ├── memory.cpython-312.pyc
-│   │       │   ├── sqlite.cpython-312.pyc
-│   │       │   └── storage.cpython-312.pyc
-│   │       ├── memory.py
-│   │       ├── sqlite.py
-│   │       └── storage.py
-│   └── tl
-│       ├── __init__.py
-│       ├── __pycache__
-│       │   ├── __init__.cpython-312.pyc
-│       │   └── layer.cpython-312.pyc
-│       ├── abcs
-│       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-312.pyc
-│       │   │   ├── _nons.cpython-312.pyc
-│       │   │   ├── account.cpython-312.pyc
-│       │   │   ├── auth.cpython-312.pyc
-│       │   │   ├── bots.cpython-312.pyc
-│       │   │   ├── channels.cpython-312.pyc
-│       │   │   ├── chatlists.cpython-312.pyc
-│       │   │   ├── contacts.cpython-312.pyc
-│       │   │   ├── help.cpython-312.pyc
-│       │   │   ├── messages.cpython-312.pyc
-│       │   │   ├── payments.cpython-312.pyc
-│       │   │   ├── phone.cpython-312.pyc
-│       │   │   ├── photos.cpython-312.pyc
-│       │   │   ├── stats.cpython-312.pyc
-│       │   │   ├── stickers.cpython-312.pyc
-│       │   │   ├── storage.cpython-312.pyc
-│       │   │   ├── stories.cpython-312.pyc
-│       │   │   ├── updates.cpython-312.pyc
-│       │   │   ├── upload.cpython-312.pyc
-│       │   │   └── users.cpython-312.pyc
-│       │   ├── _nons.py
-│       │   ├── account.py
-│       │   ├── auth.py
-│       │   ├── bots.py
-│       │   ├── channels.py
-│       │   ├── chatlists.py
-│       │   ├── contacts.py
-│       │   ├── help.py
-│       │   ├── messages.py
-│       │   ├── payments.py
-│       │   ├── phone.py
-│       │   ├── photos.py
-│       │   ├── stats.py
-│       │   ├── stickers.py
-│       │   ├── storage.py
-│       │   ├── stories.py
-│       │   ├── updates.py
-│       │   ├── upload.py
-│       │   └── users.py
-│       ├── core
-│       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-312.pyc
-│       │   │   ├── reader.cpython-312.pyc
-│       │   │   ├── request.cpython-312.pyc
-│       │   │   └── serializable.cpython-312.pyc
-│       │   ├── reader.py
-│       │   ├── request.py
-│       │   └── serializable.py
-│       ├── functions
-│       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-312.pyc
-│       │   │   ├── _nons.cpython-312.pyc
-│       │   │   ├── account.cpython-312.pyc
-│       │   │   ├── auth.cpython-312.pyc
-│       │   │   ├── bots.cpython-312.pyc
-│       │   │   ├── channels.cpython-312.pyc
-│       │   │   ├── chatlists.cpython-312.pyc
-│       │   │   ├── contacts.cpython-312.pyc
-│       │   │   ├── folders.cpython-312.pyc
-│       │   │   ├── help.cpython-312.pyc
-│       │   │   ├── langpack.cpython-312.pyc
-│       │   │   ├── messages.cpython-312.pyc
-│       │   │   ├── payments.cpython-312.pyc
-│       │   │   ├── phone.cpython-312.pyc
-│       │   │   ├── photos.cpython-312.pyc
-│       │   │   ├── stats.cpython-312.pyc
-│       │   │   ├── stickers.cpython-312.pyc
-│       │   │   ├── stories.cpython-312.pyc
-│       │   │   ├── updates.cpython-312.pyc
-│       │   │   ├── upload.cpython-312.pyc
-│       │   │   └── users.cpython-312.pyc
-│       │   ├── _nons.py
-│       │   ├── account.py
-│       │   ├── auth.py
-│       │   ├── bots.py
-│       │   ├── channels.py
-│       │   ├── chatlists.py
-│       │   ├── contacts.py
-│       │   ├── folders.py
-│       │   ├── help.py
-│       │   ├── langpack.py
-│       │   ├── messages.py
-│       │   ├── payments.py
-│       │   ├── phone.py
-│       │   ├── photos.py
-│       │   ├── stats.py
-│       │   ├── stickers.py
-│       │   ├── stories.py
-│       │   ├── updates.py
-│       │   ├── upload.py
-│       │   └── users.py
-│       ├── layer.py
-│       ├── mtproto
-│       │   ├── __init__.py
-│       │   ├── __pycache__
-│       │   │   ├── __init__.cpython-312.pyc
-│       │   │   ├── core.cpython-312.pyc
-│       │   │   └── layer.cpython-312.pyc
-│       │   ├── abcs
-│       │   │   ├── __init__.py
-│       │   │   ├── __pycache__
-│       │   │   │   ├── __init__.cpython-312.pyc
-│       │   │   │   ├── _nons.cpython-312.pyc
-│       │   │   │   └── help.cpython-312.pyc
-│       │   │   ├── _nons.py
-│       │   │   └── help.py
-│       │   ├── core.py
-│       │   ├── functions
-│       │   │   ├── __init__.py
-│       │   │   ├── __pycache__
-│       │   │   │   ├── __init__.cpython-312.pyc
-│       │   │   │   └── _nons.cpython-312.pyc
-│       │   │   └── _nons.py
-│       │   ├── layer.py
-│       │   └── types
-│       │       ├── __init__.py
-│       │       ├── __pycache__
-│       │       │   ├── __init__.cpython-312.pyc
-│       │       │   ├── _nons.cpython-312.pyc
-│       │       │   └── help.cpython-312.pyc
-│       │       ├── _nons.py
-│       │       └── help.py
-│       └── types
-│           ├── __init__.py
-│           ├── __pycache__
-│           │   ├── __init__.cpython-312.pyc
-│           │   ├── _nons.cpython-312.pyc
-│           │   ├── account.cpython-312.pyc
-│           │   ├── auth.cpython-312.pyc
-│           │   ├── bots.cpython-312.pyc
-│           │   ├── channels.cpython-312.pyc
-│           │   ├── chatlists.cpython-312.pyc
-│           │   ├── contacts.cpython-312.pyc
-│           │   ├── help.cpython-312.pyc
-│           │   ├── messages.cpython-312.pyc
-│           │   ├── payments.cpython-312.pyc
-│           │   ├── phone.cpython-312.pyc
-│           │   ├── photos.cpython-312.pyc
-│           │   ├── stats.cpython-312.pyc
-│           │   ├── stickers.cpython-312.pyc
-│           │   ├── storage.cpython-312.pyc
-│           │   ├── stories.cpython-312.pyc
-│           │   ├── updates.cpython-312.pyc
-│           │   ├── upload.cpython-312.pyc
-│           │   └── users.cpython-312.pyc
-│           ├── _nons.py
-│           ├── account.py
-│           ├── auth.py
-│           ├── bots.py
-│           ├── channels.py
-│           ├── chatlists.py
-│           ├── contacts.py
-│           ├── help.py
-│           ├── messages.py
-│           ├── payments.py
-│           ├── phone.py
-│           ├── photos.py
-│           ├── stats.py
-│           ├── stickers.py
-│           ├── storage.py
-│           ├── stories.py
-│           ├── updates.py
-│           ├── upload.py
-│           └── users.py
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── entitycache.cpython-312.pyc
+│   │   ├── messagebox.cpython-312.pyc
+│   │   └── session.cpython-312.pyc
+│   ├── entitycache.py
+│   ├── messagebox.py
+│   └── session.py
+├── client
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── account.cpython-312.pyc
+│   │   ├── auth.cpython-312.pyc
+│   │   ├── bots.cpython-312.pyc
+│   │   ├── buttons.cpython-312.pyc
+│   │   ├── chats.cpython-312.pyc
+│   │   ├── dialogs.cpython-312.pyc
+│   │   ├── downloads.cpython-312.pyc
+│   │   ├── messageparse.cpython-312.pyc
+│   │   ├── messages.cpython-312.pyc
+│   │   ├── telegrambaseclient.cpython-312.pyc
+│   │   ├── telegramclient.cpython-312.pyc
+│   │   ├── updates.cpython-312.pyc
+│   │   ├── uploads.cpython-312.pyc
+│   │   └── users.cpython-312.pyc
+│   ├── account.py
+│   ├── auth.py
+│   ├── bots.py
+│   ├── buttons.py
+│   ├── chats.py
+│   ├── dialogs.py
+│   ├── downloads.py
+│   ├── messageparse.py
+│   ├── messages.py
+│   ├── telegrambaseclient.py
+│   ├── telegramclient.py
+│   ├── updates.py
+│   ├── uploads.py
+│   └── users.py
+├── crypto
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── aes.cpython-312.pyc
+│   │   ├── aesctr.cpython-312.pyc
+│   │   ├── authkey.cpython-312.pyc
+│   │   ├── cdndecrypter.cpython-312.pyc
+│   │   ├── factorization.cpython-312.pyc
+│   │   ├── libssl.cpython-312.pyc
+│   │   └── rsa.cpython-312.pyc
+│   ├── aes.py
+│   ├── aesctr.py
+│   ├── authkey.py
+│   ├── cdndecrypter.py
+│   ├── factorization.py
+│   ├── libssl.py
+│   └── rsa.py
+├── custom.py
+├── errors
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── common.cpython-312.pyc
+│   │   ├── rpcbaseerrors.cpython-312.pyc
+│   │   └── rpcerrorlist.cpython-312.pyc
+│   ├── common.py
+│   ├── rpcbaseerrors.py
+│   └── rpcerrorlist.py
 ├── events
 │   ├── __init__.py
 │   ├── __pycache__
 │   │   ├── __init__.cpython-312.pyc
-│   │   └── filters.cpython-312.pyc
-│   └── filters.py
-├── py.typed
-├── session.py
-├── types
+│   │   ├── album.cpython-312.pyc
+│   │   ├── callbackquery.cpython-312.pyc
+│   │   ├── chataction.cpython-312.pyc
+│   │   ├── common.cpython-312.pyc
+│   │   ├── inlinequery.cpython-312.pyc
+│   │   ├── messagedeleted.cpython-312.pyc
+│   │   ├── messageedited.cpython-312.pyc
+│   │   ├── messageread.cpython-312.pyc
+│   │   ├── newmessage.cpython-312.pyc
+│   │   ├── raw.cpython-312.pyc
+│   │   └── userupdate.cpython-312.pyc
+│   ├── album.py
+│   ├── callbackquery.py
+│   ├── chataction.py
+│   ├── common.py
+│   ├── inlinequery.py
+│   ├── messagedeleted.py
+│   ├── messageedited.py
+│   ├── messageread.py
+│   ├── newmessage.py
+│   ├── raw.py
+│   └── userupdate.py
+├── extensions
 │   ├── __init__.py
 │   ├── __pycache__
 │   │   ├── __init__.cpython-312.pyc
-│   │   └── buttons.cpython-312.pyc
-│   └── buttons.py
+│   │   ├── binaryreader.cpython-312.pyc
+│   │   ├── html.cpython-312.pyc
+│   │   ├── markdown.cpython-312.pyc
+│   │   └── messagepacker.cpython-312.pyc
+│   ├── binaryreader.py
+│   ├── html.py
+│   ├── markdown.py
+│   └── messagepacker.py
+├── functions.py
+├── helpers.py
+├── hints.py
+├── network
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── authenticator.cpython-312.pyc
+│   │   ├── mtprotoplainsender.cpython-312.pyc
+│   │   ├── mtprotosender.cpython-312.pyc
+│   │   ├── mtprotostate.cpython-312.pyc
+│   │   └── requeststate.cpython-312.pyc
+│   ├── authenticator.py
+│   ├── connection
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── connection.cpython-312.pyc
+│   │   │   ├── http.cpython-312.pyc
+│   │   │   ├── tcpabridged.cpython-312.pyc
+│   │   │   ├── tcpfull.cpython-312.pyc
+│   │   │   ├── tcpintermediate.cpython-312.pyc
+│   │   │   ├── tcpmtproxy.cpython-312.pyc
+│   │   │   └── tcpobfuscated.cpython-312.pyc
+│   │   ├── connection.py
+│   │   ├── http.py
+│   │   ├── tcpabridged.py
+│   │   ├── tcpfull.py
+│   │   ├── tcpintermediate.py
+│   │   ├── tcpmtproxy.py
+│   │   └── tcpobfuscated.py
+│   ├── mtprotoplainsender.py
+│   ├── mtprotosender.py
+│   ├── mtprotostate.py
+│   └── requeststate.py
+├── password.py
+├── requestiter.py
+├── sessions
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── abstract.cpython-312.pyc
+│   │   ├── memory.cpython-312.pyc
+│   │   ├── sqlite.cpython-312.pyc
+│   │   └── string.cpython-312.pyc
+│   ├── abstract.py
+│   ├── memory.py
+│   ├── sqlite.py
+│   └── string.py
+├── sync.py
+├── tl
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── alltlobjects.cpython-312.pyc
+│   │   └── tlobject.cpython-312.pyc
+│   ├── alltlobjects.py
+│   ├── core
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── gzippacked.cpython-312.pyc
+│   │   │   ├── messagecontainer.cpython-312.pyc
+│   │   │   ├── rpcresult.cpython-312.pyc
+│   │   │   └── tlmessage.cpython-312.pyc
+│   │   ├── gzippacked.py
+│   │   ├── messagecontainer.py
+│   │   ├── rpcresult.py
+│   │   └── tlmessage.py
+│   ├── custom
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── adminlogevent.cpython-312.pyc
+│   │   │   ├── button.cpython-312.pyc
+│   │   │   ├── chatgetter.cpython-312.pyc
+│   │   │   ├── conversation.cpython-312.pyc
+│   │   │   ├── dialog.cpython-312.pyc
+│   │   │   ├── draft.cpython-312.pyc
+│   │   │   ├── file.cpython-312.pyc
+│   │   │   ├── forward.cpython-312.pyc
+│   │   │   ├── inlinebuilder.cpython-312.pyc
+│   │   │   ├── inlineresult.cpython-312.pyc
+│   │   │   ├── inlineresults.cpython-312.pyc
+│   │   │   ├── inputsizedfile.cpython-312.pyc
+│   │   │   ├── message.cpython-312.pyc
+│   │   │   ├── messagebutton.cpython-312.pyc
+│   │   │   ├── participantpermissions.cpython-312.pyc
+│   │   │   ├── qrlogin.cpython-312.pyc
+│   │   │   └── sendergetter.cpython-312.pyc
+│   │   ├── adminlogevent.py
+│   │   ├── button.py
+│   │   ├── chatgetter.py
+│   │   ├── conversation.py
+│   │   ├── dialog.py
+│   │   ├── draft.py
+│   │   ├── file.py
+│   │   ├── forward.py
+│   │   ├── inlinebuilder.py
+│   │   ├── inlineresult.py
+│   │   ├── inlineresults.py
+│   │   ├── inputsizedfile.py
+│   │   ├── message.py
+│   │   ├── messagebutton.py
+│   │   ├── participantpermissions.py
+│   │   ├── qrlogin.py
+│   │   └── sendergetter.py
+│   ├── functions
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── account.cpython-312.pyc
+│   │   │   ├── auth.cpython-312.pyc
+│   │   │   ├── bots.cpython-312.pyc
+│   │   │   ├── channels.cpython-312.pyc
+│   │   │   ├── chatlists.cpython-312.pyc
+│   │   │   ├── contacts.cpython-312.pyc
+│   │   │   ├── folders.cpython-312.pyc
+│   │   │   ├── fragment.cpython-312.pyc
+│   │   │   ├── help.cpython-312.pyc
+│   │   │   ├── langpack.cpython-312.pyc
+│   │   │   ├── messages.cpython-312.pyc
+│   │   │   ├── payments.cpython-312.pyc
+│   │   │   ├── phone.cpython-312.pyc
+│   │   │   ├── photos.cpython-312.pyc
+│   │   │   ├── premium.cpython-312.pyc
+│   │   │   ├── smsjobs.cpython-312.pyc
+│   │   │   ├── stats.cpython-312.pyc
+│   │   │   ├── stickers.cpython-312.pyc
+│   │   │   ├── stories.cpython-312.pyc
+│   │   │   ├── updates.cpython-312.pyc
+│   │   │   ├── upload.cpython-312.pyc
+│   │   │   └── users.cpython-312.pyc
+│   │   ├── account.py
+│   │   ├── auth.py
+│   │   ├── bots.py
+│   │   ├── channels.py
+│   │   ├── chatlists.py
+│   │   ├── contacts.py
+│   │   ├── folders.py
+│   │   ├── fragment.py
+│   │   ├── help.py
+│   │   ├── langpack.py
+│   │   ├── messages.py
+│   │   ├── payments.py
+│   │   ├── phone.py
+│   │   ├── photos.py
+│   │   ├── premium.py
+│   │   ├── smsjobs.py
+│   │   ├── stats.py
+│   │   ├── stickers.py
+│   │   ├── stories.py
+│   │   ├── updates.py
+│   │   ├── upload.py
+│   │   └── users.py
+│   ├── patched
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-312.pyc
+│   ├── tlobject.py
+│   └── types
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-312.pyc
+│       │   ├── account.cpython-312.pyc
+│       │   ├── auth.cpython-312.pyc
+│       │   ├── bots.cpython-312.pyc
+│       │   ├── channels.cpython-312.pyc
+│       │   ├── chatlists.cpython-312.pyc
+│       │   ├── contacts.cpython-312.pyc
+│       │   ├── fragment.cpython-312.pyc
+│       │   ├── help.cpython-312.pyc
+│       │   ├── messages.cpython-312.pyc
+│       │   ├── payments.cpython-312.pyc
+│       │   ├── phone.cpython-312.pyc
+│       │   ├── photos.cpython-312.pyc
+│       │   ├── premium.cpython-312.pyc
+│       │   ├── smsjobs.cpython-312.pyc
+│       │   ├── stats.cpython-312.pyc
+│       │   ├── stickers.cpython-312.pyc
+│       │   ├── storage.cpython-312.pyc
+│       │   ├── stories.cpython-312.pyc
+│       │   ├── updates.cpython-312.pyc
+│       │   ├── upload.cpython-312.pyc
+│       │   └── users.cpython-312.pyc
+│       ├── account.py
+│       ├── auth.py
+│       ├── bots.py
+│       ├── channels.py
+│       ├── chatlists.py
+│       ├── contacts.py
+│       ├── fragment.py
+│       ├── help.py
+│       ├── messages.py
+│       ├── payments.py
+│       ├── phone.py
+│       ├── photos.py
+│       ├── premium.py
+│       ├── smsjobs.py
+│       ├── stats.py
+│       ├── stickers.py
+│       ├── storage.py
+│       ├── stories.py
+│       ├── updates.py
+│       ├── upload.py
+│       └── users.py
+├── types.py
+├── utils.py
 └── version.py
 
-60 directories, 365 files
+32 directories, 300 file
